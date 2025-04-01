@@ -38,6 +38,10 @@ class HomeController < ApplicationController
       {
         question: "Will this actually help me sleep better?",
         answer: "Yes—if you show up for it. Sleepr helps you build the 3 most impactful sleep habits backed by science. Stay consistent, and you’ll feel the difference (and maybe even snag a Gold Owlie while you're at it).",
+      },
+      {
+        question: "Where do I go to get help?",
+        answer: "Easy. Just send an email to <a href=\"mailto:donald@sleeprapp.com\" class=\"text-blue-500 hover:underline\">donald@sleeprapp.com</a>".html_safe
       }
   ]
   end
