@@ -1,45 +1,43 @@
 class HomeController < ApplicationController
   def index
-    @landing = params[:landing]
     @faqs = [
       {
         question: 'Do you have a free trial?',
         answer:
-          'Yes, we have a free forever plan that allows you to try out the basic features.',
+          'Yes, we have a 7-day free trial for you to try out the ENTIRE app',
       },
       {
         question: 'Do you offer refunds?',
-        answer: "Absolutely! We offer a 30 days full refund, from the time you get access, if you're not satisfied with the product. No questions asked!",
+        answer: "Since we distribute through Apple, all refunds and subscriptions management are handled through your Apple Account.",
       },
       {
-        question: 'Are there really no subscriptions?',
+        question: 'When will I start seeing results?',
         answer:
-          'Not for early-adopters. NEVER! For your belief in me, you will be grandfathered into our launch prices forever.',
+          'Building better sleep habits is personal. Some users notice improvements within days, while others take longer. Consistency is key.',
       },
       {
-        question: 'When will I start seeing reviews appear?',
+        question: "Does this mean I have to give up nights out?",
         answer:
-          'Once you add your keywords, BuzzwallHQ will start scanning to get the most recent reviews for those keywords. Typically you sill start seeing leads flow in within the first 48 hours.',
-      },
-      {
-        question: "What's a 'Wall'?",
-        answer:
-          'A wall is where you showcase all your approved reviews. Each wall has an embed link that you can use to showcase your reviews on your website.',
+          "Not necessarily. The goal is to get restful sleep. If your circadian rhythm makes you sleepy at 2am and you wake at 10am, that's still 8 hours + time to party!",
       },
       {
         question:
-          'Can you explain the "X approved reviews"?',
+          'Is Sleepr just for people with insomnia?',
         answer:
-          'We find your reviews/content ideas for the given keywords. The ones you approve will be shown and saved on your wall. Free plans will only show 9 approved reviews/content ideas at a time per wall; subscribers can show unlimited approved reviews/content ideas on a wall.',
+          'Not at all. Sleepr is for anyone who wants to improve their sleep—whether you’re struggling to fall asleep, wake up groggy, or just want to feel more rested and energized.',
       },
       {
-        question: 'What are keywords tracked?',
+        question: 'Do I need a wearable to use the app?',
         answer:
-        'The # of keywords you can input into BuzzwallHQ to constantly track for new reviews and viral content. Each keyword will generate a list of reviews and viral content that you can approve, reject, or model.',
+        "Nope! Wearables like Oura, Fitbit, or Apple Watch can enhance your experience, but they're totally optional. Sleepr still helps you build better sleep habits even without one. There are future plans to integrate wearables to help 10X your sleep.",
       },
       {
-        question: "What's the difference between Basic and Advanced Reviews Tracking",
-        answer: "BuzzwallHQ's AI recommendation on who you should reach out to for sponsorship/collaborations + future tracking features are included in advanced. Basic will only ever track review performance.",
+        question: "How is Sleepr different from other sleep apps?",
+        answer: "Most apps just track your sleep. Sleepr helps you change it. Through gamification, habit nudges, and community support, you’ll actually build better sleep—not just analyze it.",
+      },
+      {
+        question: "Will this actually help me sleep better?",
+        answer: "Yes—if you show up for it. Sleepr helps you build the 3 most impactful sleep habits backed by science. Stay consistent, and you’ll feel the difference (and maybe even snag a Gold Owlie while you're at it).",
       }
   ]
   end

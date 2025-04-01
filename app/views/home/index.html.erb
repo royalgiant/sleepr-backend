@@ -20,186 +20,228 @@
     Building Better Sleep Habits
   </h1>
   <p class="mx-auto mt-6 max-w-2xl text-lg text-center tracking-tight text-gray-600 font-light">
-    Discover the same sleep habits to sleep like top performers and wake up refreshed.
+    Learn the sleep habits top performers live by and wake up feeling refreshed.
   </p>
   <div class="mt-10 flex justify-center gap-x-6">
-    <%= link_to "Download", "#pricing", class: "rounded-full bg-white px-4 py-3 text-sm font-semibold text-black shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" %>
+    <%= link_to "Download", "https://testflight.apple.com/join/T6zg99ra", target:"_blank", class: "rounded-full bg-white px-8 py-3 text-sm font-normal text-xl text-black shadow-sm hover:bg-gray-200" %>
   </div>
   
   </div>
-  <div class="flex justify-center mt-6">
-    <%= image_tag "hero-how-it-works-2.png", class: "object-cover", alt: "", width: 800, height: 56 %>
-  </div>
-  <div>
-    <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
-      <% [
-        { value: "680%", description: "More likely to create a viral hit" },
-        { value: "50+", description: "Hours saved monthly finding viral content" },
-        { value: "3X", description: "Cost savings on researching content ideas." }
-      ].each do |stat| %>
-        <div class="overflow-hidden rounded-lg bg-black text-white px-6 py-5">
-          <dd class="mt-1 text-6xl font-bold tracking-tight text-white"><%= stat[:value] %></dd>
-          <dt class="truncate text-lg font-light text-gray-500"><%= stat[:description] %></dt>
-        </div>
-      <% end %>
-    </dl>
+  <div class="flex justify-center">
+    <%= image_tag "hero_cover.png", class: "object-cover", alt: "", width: 1200 %>
   </div>
 </div>
 
 <section id="features">
-  <div class="mx-auto max-w-5xl md:text-cente px-3 sm:px-6 lg:px-8">
-    <h2 class="font-display text-3xl tracking-tight text-white sm:text-5xl">
-      Ready to wake up to new viral content ideas daily?
+  <div class="mx-auto max-w-5xl md:text-center px-3 sm:px-6 lg:px-8">
+    <h2 class="font-display text-3xl tracking-tight text-center text-white sm:text-5xl mt-6">
+      Wake Up Energized 
     </h2>
-    <p class="mt-4 text-lg tracking-tight text-gray-700">
-      BuzzwallHQ, your go-to content assistant, saves you <b class="text-white">50+ hours / mo</b> by finding viral ideas for your next content piece.
+    <p class="mt-4 text-lg tracking-tight text-center text-gray-700">
+      Follow 3 simple habits and hit the pillow snoozing. No more counting sheep or praying for sleep.
     </p>
   </div>
-  <div class="bg-black text-white container mx-auto lg:max-w-7xl">
-    <div class="mx-auto px-4 py-12 sm:px-6 lg:max-w-7xl lg:px-8">
-      <div class="space-y-16">
-        <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
-          <div class="mt-6 lg:col-span-6 lg:col-start-1 lg:row-start-1 lg:mt-0 xl:col-span-4 text-left">
-            <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 border border-gray-200">
-              FOR BUILDERS
-            </span>
-            <h3 class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">Get email alerts for new content ideas</h3>
-            <p class="mt-2 text-md tracking-tight text-gray-700">
-              Input your keywords and BuzzwallHQ will collect content across social media platforms based on those keywords
-            </p>
-            <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-              <% [
-                "50+ hours saved from manually collecting ideas",
-                "6.8X your chances of creating a viral hit",
-                "Supports TikTok, Instagram, and Youtube"
-              ].each do |item| %>
-                <li class="flex gap-x-3">
-                  <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
-                  </svg>
-                  <b><%= item %></b>
-                </li>
-              <% end %>
-            </ul>
-            <div class="mt-6 flex gap-x-6">
-              <%= link_to "Join Now", "#pricing", class: "rounded-full bg-black px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" %>
-            </div>
-          </div>
-          <div class="flex-auto lg:col-start-6 lg:row-start-1 xl:col-span-8 xl:col-start-5">
-            <%= image_tag "landing_viral_builders.png", class: "object-cover", alt: "", width: 900, height: 56 %>
-          </div>
+
+  <div class="container mx-auto lg:max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <svg class="h-8 w-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+          </svg>
         </div>
-        <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
-          <div class="mt-6 lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:mt-0 xl:col-span-4 xl:col-start-9 text-left">
-            <span class="inline-flex items-center rounded-md bg-yellow-100 px-2 py-1 text-xs font-medium text-white border border-yellow-200">
-              FOR BRANDS
-            </span>
-            <h3 class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">Collect viral content ideas for inspiration</h3>
-            <p class="mt-2 text-md tracking-tight text-gray-700">
-              Build an embeddable Buzzwall to save and share content ideas with your team
-            </p>
-            <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-              <% [
-                "3X productivity with finding trending content ideas",
-                "Email alerts of new content ideas found"
-              ].each do |item| %>
-                <li class="flex gap-x-3">
-                  <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
-                  </svg>
-                  <b><%= item %></b>
-                </li>
-              <% end %>
-            </ul>
-            <div class="mt-6 flex gap-x-6">
-              <%= link_to "Find My Viral Ideas", "#pricing", class: "rounded-full bg-black px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" %>
-            </div>
-          </div>
-          <div class="flex-auto lg:col-span-7 lg:col-start-1 lg:row-start-1 xl:col-span-8">
-            <%= image_tag "landing_viral_brands.png", class: "object-cover", alt: "", width: 900, height: 56 %>
-          </div>
+        <h3 class="text-lg font-bold text-white">Streaks</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          A gamefied experience with streaks, helping you be consistent because who wants to break their streak?
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <svg class="h-8 w-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
         </div>
-        <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8">
-          <div class="mt-6 lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:mt-0 xl:col-span-4 text-left">
-            <span class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-xs font-medium text-white border border-green-200">
-              FOR AGENCIES
-            </span>
-            <h3 class="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">Track Content Performance Over Time with AI</h3>
-            <p class="mt-2 text-md tracking-tight text-gray-700">
-              Our AI's content tracker keeps track of approved content ideas' performance over time and alerts you of any old trends that are picking up
-            </p>
-            <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-gray-600">
-              <% [
-                "Identify best influencers for partnerships",
-                "Track old content trends that are picking up",
-                "Alerts for when to make content for a trending idea"
-              ].each do |item| %>
-                <li class="flex gap-x-3">
-                  <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
-                  </svg>
-                  <b><%= item %></b>
-                </li>
-              <% end %>
-            </ul>
-            <div class="mt-6 flex gap-x-6">
-              <%= link_to "Track Viral Trends", "#pricing", class: "rounded-full bg-black px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" %>
-            </div>
-          </div>
-          <div class="flex-auto lg:col-span-7 lg:col-start-6 lg:row-start-1 xl:col-span-8 xl:col-start-5">
-            <%= image_tag "landing_viral_agencies.png", class: "object-cover", alt: "", width: 900, height: 56 %>
-          </div>
+        <h3 class="text-lg font-bold text-white">Community</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Our community brings you closer to people who get it—connect through forums or private group chats to share, support, and grow together.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-regular fa-bell fa-2x text-orange-400"></i>
         </div>
+        <h3 class="text-lg font-bold text-white">Notifications</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Our app reminds you when to stop or start certain habits, based on your personal preferences, to set you up for a good night's sleep
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-solid fa-3 fa-2x text-orange-400"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Big 3 Sleep Habits</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Get reminded to do your BIG 3 sleep habits that accounts for 80% of a good night's sleep.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-brands fa-earlybirds fa-2x text-orange-400"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Go For Gold!</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          For those who don't like bronze or silver. Catch our coveted Gold Owlie daily. And go to bed a winner.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-solid fa-ranking-star fa-2x text-orange-400"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Leaderboards (Coming Soon)</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          For our highly competitive, who wants to compete even on sleep!?! Leaderboards coming soon.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mx-auto max-w-5xl md:text-center px-3 sm:px-6 lg:px-8 mt-16">
+    <h2 class="font-display text-3xl tracking-tight text-center text-white sm:text-5xl mt-6">
+      Life Saving Benefits of Restful Sleep
+    </h2>
+    <p class="mt-4 text-lg tracking-tight text-center text-gray-700">
+      Sleep researcher and author of bestseller "Why We Sleep" discovered restful sleep prevents a multitude of diseases.
+    </p>
+  </div>
+
+  <div class="container mx-auto lg:max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <svg class="h-8 w-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+          </svg>
+
+        </div>
+        <h3 class="text-lg font-bold text-white">Heart Disease & Stroke</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Sleeping less than 6-7 hours per night is linked to a 200-300% increased risk of heart attack and stroke compared to those who sleep enough.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-solid fa-virus-covid h-8 w-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Weakened Immune System</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Just one night of four hours of sleep can reduce natural killer cell activity by 70%, making the body more vulnerable to infections and even cancer.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-solid fa-brain fa-2x text-orange-400"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Alzheimer’s Disease</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Sleep is critical for clearing out beta-amyloid, a toxic protein linked to Alzheimer’s. Poor sleep, especially deep sleep deprivation, accelerates cognitive decline.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-solid fa-burger fa-3 fa-2x text-orange-400"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Diabetes & Obesity</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Sleeping less than six hours disrupts insulin regulation, increasing the risk of type 2 diabetes.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-solid fa-sad-tear fa-2x text-orange-400"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Mental Health Disorders</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Chronic lack of sleep is strongly linked to anxiety and depression. If you're fighting mental health issues, sleep is likely the problem.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-4">
+          <i class="fa-solid fa-car-burst fa-2x text-orange-400"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Risk of Accidents</h3>
+        <p class="mt-2 text-sm text-gray-400">
+          Drowsy driving is responsible for an estimated 6,000 deaths (almost as much as drunk driving at 10,000 deaths) in the U.S. each year.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-gray-900 py-20 sm:py-32">
+<section class="py-20 sm:py-22">
   <div class="md:text-center px-3 sm:px-6 lg:px-8">
-    <h2 class="font-display text-3xl tracking-tight text-white sm:text-4xl">
-      Get it Now!
+    <h2 class="font-display font-bold text-3xl tracking-tight text-center text-white sm:text-5xl mt-3">
+      Good sleep isn’t a luxury – It’s a Necessity.
     </h2>
+    <div class="mt-5 flex justify-center gap-x-6">
+      <%= link_to "Download", "https://testflight.apple.com/join/T6zg99ra", target:"_blank", class: "rounded-full bg-white px-8 py-3 text-sm font-normal text-xl text-black shadow-sm hover:bg-gray-200" %>
+    </div>
   </div>
 </section>
 
 <div class="relative mx-auto px-4 sm:px-6 lg:px-8">
   <section id="faq" aria-labelledby="faq-title" className="relative overflow-hidden bg-gray-50 py-20 sm:py-32">
-      <div class="container mx-auto lg:max-w-7xl">
-        <div class="py-32">
-          <h2 id="faq-title" class="font-display text-3xl tracking-tight text-white sm:text-5xl"
-          >
-            Frequently asked questions
-          </h2>
-          <p class="mt-4 text-xl font-light tracking-tight text-gray-700">
-            If you can't find what you're looking for, email our support team
-            and someone will get back to you.
-          </p>
+    <div class="container mx-auto lg:max-w-7xl">
+      <div class="py-6">
+        <h2 id="faq-title" class="font-display text-3xl tracking-tight text-center text-white sm:text-5xl">
+          Frequently asked questions
+        </h2>
+        <p class="mt-4 text-xl font-light text-center tracking-tight text-gray-700">
+          Get quick answers to the most common questions about our sleep habits app
+        </p>
 
-          <dl class=" container mt-10 space-y-6 divide-y divide-gray-900/10">
-            <% @faqs.each_with_index do |faq, index| %>
-              <div class="pt-6">
-                <dt>
-                  <button type="button" class="flex w-full items-start justify-between text-left text-white" aria-controls="faq-<%= index %>" aria-expanded="false">
-                    <span class="text-base font-semibold leading-7"><%= faq[:question] %></span>
-                    <span class="ml-6 flex h-7 items-center">
-                      <svg class="h-6 w-6 plus-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                      </svg>
-                      <svg class="hidden h-6 w-6 minus-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                      </svg>
-                    </span>
-                  </button>
-                </dt>
-                <dd class="mt-2 pr-12 hidden" id="faq-<%= index %>">
-                  <p class="text-base leading-7 text-gray-600"><%= faq[:answer] %></p>
-                </dd>
-              </div>
-            <% end %>
-          </dl>
-        </div>
+        <dl class=" container mt-10 space-y-6 divide-y divide-gray-900/10">
+          <% @faqs.each_with_index do |faq, index| %>
+            <div class="pt-6">
+              <dt>
+                <button type="button" class="flex w-full items-start justify-between text-left text-white" aria-controls="faq-<%= index %>" aria-expanded="false">
+                  <span class="text-base font-semibold leading-7"><%= faq[:question] %></span>
+                  <span class="ml-6 flex h-7 items-center">
+                    <svg class="h-6 w-6 plus-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    <svg class="hidden h-6 w-6 minus-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
+                </button>
+              </dt>
+              <dd class="mt-2 pr-12 hidden" id="faq-<%= index %>">
+                <p class="text-base leading-7 text-gray-600"><%= faq[:answer] %></p>
+              </dd>
+            </div>
+          <% end %>
+        </dl>
       </div>
+    </div>
+
+    <div class="md:text-center px-3 sm:px-6 lg:px-8">
+      <h2 class="font-display font-light text-3xl tracking-tight text-center text-white sm:text-5xl mt-24">
+        Ready to Sleep Better – Forever?
+      </h2>
+      <div class="mt-5 flex justify-center gap-x-6">
+        <%= link_to "Download", "https://testflight.apple.com/join/T6zg99ra", target:"_blank", class: "rounded-full bg-white px-8 py-3 text-sm font-normal text-xl text-black shadow-sm hover:bg-gray-200" %>
+      </div>
+    </div>
   </section>
 
   <footer class="bg-gray-50">
@@ -216,7 +258,7 @@
       </div>
       <div class="flex flex-col items-center border-t border-gray-400/10 py-10 sm:flex-row-reverse sm:justify-between">
         <div class="flex gap-x-6">
-          <%= link_to "https://x.com/donaldklee", class: "group", aria_label: "BuzzwallHQ on X", target: "_blank", rel: "noopener noreferrer" do %>
+          <%= link_to "https://x.com/donaldklee", class: "group", aria_label: "Sleepr on X", target: "_blank", rel: "noopener noreferrer" do %>
             <svg
               class="h-6 w-6 fill-gray-500 group-hover:fill-gray-700"
               aria-hidden="true"
@@ -227,7 +269,7 @@
           <% end %>
         </div>
         <p class="mt-6 text-sm text-gray-500 sm:mt-0">
-          Copyright &copy; <%= Time.current.year %> BuzzwallHQ. All rights reserved.
+          Copyright &copy; <%= Time.current.year %> Sleepr. All rights reserved.
         </p>
       </div>
     </div>
