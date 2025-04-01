@@ -7,14 +7,14 @@ image: donaldlee50/sleeprapp
 # Deploy to these servers.
 servers:
   web:
-    - 5.78.94.94
+    - 95.216.161.144
   # job:
   #   hosts:
-  #     - 5.78.94.94
+  #     - 95.216.161.144
   #   cmd: bin/jobs
   cron:
     hosts:
-      - 5.78.94.94
+      - 95.216.161.144
     cmd:
       bash -c "bundle exec sidekiq"
     env:
@@ -23,8 +23,6 @@ servers:
       secret:
         - REDIS_URL
         - REDIS_PASSWORD
-        - SHOPIFY_API_KEY
-        - SHOPIFY_API_SECRET
 
 # Enable SSL auto certification via Let's Encrypt (and allow for multiple apps on one server).
 # If using something like Cloudflare, it is recommended to set encryption mode 
@@ -56,8 +54,6 @@ env:
     - RAILS_ENV
     - REDIS_URL
     - REDIS_PASSWORD
-    - SHOPIFY_API_KEY
-    - SHOPIFY_API_SECRET
 
 # Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
 # "bin/kamal logs -r job" will tail logs from the first server in the job section.
@@ -96,48 +92,49 @@ aliases:
 # Use accessory services (secrets come from .kamal/secrets).
 #
 accessories:
-  db:
-    image: postgres:16
-    host: 5.78.94.94
-    port: 5432
-    env:
-      clear:
-        POSTGRES_USER: postgres
-        POSTGRES_DB: sleeprapp_production
-        RAILS_ENV: production
-      secret:
-        - POSTGRES_PASSWORD
-    files:
-      - config/init.sql:/docker-entrypoint-initdb.d/setup.sql
-    directories:
-      - data:/var/lib/postgresql/data
+  # Reuse db from keepviews
+  # db:
+  #   image: postgres:16
+  #   host: 95.216.161.144
+  #   port: 5432
+  #   env:
+  #     clear:
+  #       POSTGRES_USER: postgres
+  #       POSTGRES_DB: sleeprapp_production
+  #       RAILS_ENV: production
+  #     secret:
+  #       - POSTGRES_PASSWORD
+  #   files:
+  #     - config/init.sql:/docker-entrypoint-initdb.d/setup.sql
+  #   directories:
+  #     - data:/var/lib/postgresql/data
   postgres-backups:
     image: eeshugerman/postgres-backup-s3:16
-    host: 5.78.94.94
+    host: 95.216.161.144
     env:
       clear:
-        SCHEDULE: "29 21 * * *"
+        SCHEDULE: "05 00 * * *"
         BACKUP_KEEP_DAYS: 7
         S3_REGION: us-east-2
         S3_BUCKET: sleeprapp
         S3_PREFIX: postgres-backups
-        POSTGRES_HOST: 5.78.94.94
+        POSTGRES_HOST: 95.216.161.144
         POSTGRES_USER: "postgres"
         POSTGRES_DATABASE: "sleeprapp_production"
       secret:
         - POSTGRES_PASSWORD
         - S3_ACCESS_KEY_ID
         - S3_SECRET_ACCESS_KEY
-  redis:
-    image: redis:7.2
-    host: 5.78.94.94
-    env:
-      clear:
-        RAILS_ENV: production
-      secret:
-        - REDIS_URL
-        - REDIS_PASSWORD
-    port: 6379
-    cmd: "/bin/sh -c 'redis-server --requirepass $REDIS_PASSWORD'"
-    directories:
-      - data:/data
+  # redis:
+  #   image: redis:7.2
+  #   host: 95.216.161.144
+  #   env:
+  #     clear:
+  #       RAILS_ENV: production
+  #     secret:
+  #       - REDIS_URL
+  #       - REDIS_PASSWORD
+  #   port: 6379
+  #   cmd: "/bin/sh -c 'redis-server --requirepass $REDIS_PASSWORD'"
+  #   directories:
+  #     - data:/data

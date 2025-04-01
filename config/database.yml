@@ -24,7 +24,7 @@
 #   adapter: mysql2
 #   encoding: utf8
 #   reconnect: false
-#   database: sleepr_test
+#   database: sleeprapp_test
 #   pool: 5
 #   username: root
 #   password: Edward3935$
@@ -61,7 +61,7 @@ default: &default
 
 development:
   <<: *default
-  database: sleepr_development
+  database: sleeprapp_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -95,7 +95,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: sleepr_test
+  database: sleeprapp_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

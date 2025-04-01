@@ -16,9 +16,18 @@ ENV RAILS_ENV="production" \
 # Throw-away build stage to reduce size of final image
 FROM base AS build
 
-# Install packages needed to build gems
+# Install packages needed to build gems and node modules
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git libvips pkg-config libpq-dev
+    apt-get install --no-install-recommends -y build-essential \
+    git \
+    libpq-dev \
+    libvips \
+    ffmpeg \
+    pkg-config \
+    zlib1g-dev \
+    liblzma-dev \
+    libxml2-dev \
+    libxslt-dev
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
@@ -40,23 +49,17 @@ FROM base
 
 # Install packages needed for deployment
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl libsqlite3-0 libvips libpq-dev && \
+    apt-get install --no-install-recommends -y curl libvips ffmpeg postgresql-client && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Copy built artifacts: gems, application
 COPY --from=build /usr/local/bundle /usr/local/bundle
 COPY --from=build /rails /rails
 
-# Copy the docker-entrypoint script
-COPY bin/docker-entrypoint /rails/bin/docker-entrypoint
-RUN chmod +x /rails/bin/docker-entrypoint
-
-# Create necessary directories and set ownership
-RUN mkdir -p db log storage tmp && \
-    useradd rails --create-home --shell /bin/bash && \
-    chown -R rails:rails db log storage tmp
-
 # Run and own only the runtime files as a non-root user for security
+RUN useradd rails --create-home --shell /bin/bash && \
+    chown -R rails:rails /rails
+
 USER rails:rails
 
 # Entrypoint prepares the database.
@@ -64,4 +67,4 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-CMD ["./bin/rails", "server", "-b", "0.0.0.0", "-p", "3000"]
+CMD ["./bin/rails", "server"]
